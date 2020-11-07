@@ -3,10 +3,7 @@
 
 #include <QWidget>
 #include <QTreeWidget>
-#include <QDragEnterEvent>
-#include <QDebug>
-#include <QDrag>
-#include <QMimeData>
+#include "qlib/qlib.h"
 namespace Ui {
 class QTreeWidgetExx;
 }

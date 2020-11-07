@@ -14,14 +14,35 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="xTreeWidget" name="ptree" native="true"/>
+       <widget class="xTreeWidget" name="ptree" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>55</width>
+          <height>55</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="xTableWidget" name="ptable" native="true"/>
+       <widget class="xTableWidget" name="ptable" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>55</width>
+          <height>55</height>
+         </size>
+        </property>
+        <zorder>horizontalSpacer</zorder>
+       </widget>
       </item>
      </layout>
     </item>

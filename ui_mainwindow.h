@@ -17,7 +17,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "xtablewidget.h"
 #include "xtreewidget.h"
@@ -28,7 +27,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
     xTreeWidget *ptree;
     xTableWidget *ptable;
@@ -41,25 +40,28 @@ public:
         MainWindow->resize(1009, 642);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout = new QVBoxLayout(centralWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_2 = new QHBoxLayout(centralWidget);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         ptree = new xTreeWidget(centralWidget);
         ptree->setObjectName(QStringLiteral("ptree"));
+        ptree->setMinimumSize(QSize(55, 55));
+        ptree->setMaximumSize(QSize(300, 16777215));
 
         horizontalLayout->addWidget(ptree);
 
         ptable = new xTableWidget(centralWidget);
         ptable->setObjectName(QStringLiteral("ptable"));
+        ptable->setMinimumSize(QSize(55, 55));
 
         horizontalLayout->addWidget(ptable);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        horizontalLayout_2->addLayout(horizontalLayout);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);

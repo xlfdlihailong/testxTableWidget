@@ -93,5 +93,41 @@
         <file>qss/psblack/radiobutton_checked_disable.png</file>
         <file>qss/psblack/radiobutton_unchecked.png</file>
         <file>qss/psblack/radiobutton_unchecked_disable.png</file>
+        <file>icons/2x2.png</file>
+        <file>icons/4.png</file>
+        <file>icons/6.png</file>
+        <file>icons/9.png</file>
+        <file>icons/bujuw.png</file>
+        <file>icons/close.png</file>
+        <file>icons/close2.png</file>
+        <file>icons/Compare1.bmp</file>
+        <file>icons/diany.png</file>
+        <file>icons/Exit_01 - 副本.bmp</file>
+        <file>icons/Exit_01.bmp</file>
+        <file>icons/Exit_01.png</file>
+        <file>icons/KHCFDC_放大.png</file>
+        <file>icons/KHCFDC_缩小.png</file>
+        <file>icons/setoption.png</file>
+        <file>icons/保存布局.png</file>
+        <file>icons/层级.png</file>
+        <file>icons/电源.png</file>
+        <file>icons/方向圆-向上.png</file>
+        <file>icons/方向圆-向下.png</file>
+        <file>icons/方向圆-向右.png</file>
+        <file>icons/方向圆-向左.png</file>
+        <file>icons/放大.png</file>
+        <file>icons/放大2.png</file>
+        <file>icons/放大4.png</file>
+        <file>icons/关闭.png</file>
+        <file>icons/截图.png</file>
+        <file>icons/设置.png</file>
+        <file>icons/设置w.png</file>
+        <file>icons/摄像头.png</file>
+        <file>icons/缩小.png</file>
+        <file>icons/图标.png</file>
+        <file>icons/图标2.png</file>
+        <file>icons/图标3.png</file>
+        <file>icons/图标4.png</file>
+        <file>icons/图标5.png</file>
     </qresource>
 </RCC>

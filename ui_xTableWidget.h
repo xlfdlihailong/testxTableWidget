@@ -39,7 +39,7 @@ public:
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(55, 55));
         QFont font;
-        font.setFamily(QStringLiteral("DejaVu Sans Mono"));
+        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font.setPointSize(11);
         tableWidget->setFont(font);
         tableWidget->setWordWrap(false);

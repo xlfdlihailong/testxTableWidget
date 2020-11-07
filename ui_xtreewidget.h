@@ -32,11 +32,16 @@ public:
             xTreeWidget->setObjectName(QStringLiteral("xTreeWidget"));
         xTreeWidget->resize(751, 640);
         verticalLayout = new QVBoxLayout(xTreeWidget);
+        verticalLayout->setSpacing(0);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         treeWidget = new QTreeWidgetExx(xTreeWidget);
         treeWidget->setObjectName(QStringLiteral("treeWidget"));
         QFont font;
-        font.setPointSize(9);
+        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
+        font.setPointSize(11);
+        font.setBold(true);
+        font.setWeight(75);
         treeWidget->setFont(font);
 
         verticalLayout->addWidget(treeWidget);

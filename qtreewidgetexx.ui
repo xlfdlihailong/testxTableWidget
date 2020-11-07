@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>QTreeWidgetExx</class>
  <widget class="QWidget" name="QTreeWidgetExx">
   <property name="geometry">
@@ -12,10 +10,18 @@
     <height>300</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>楷体</family>
+    <pointsize>14</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>

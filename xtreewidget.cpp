@@ -8,15 +8,13 @@ xTreeWidget::xTreeWidget(QWidget *parent) :
     ui->setupUi(this);
 
     this->isCheckable=false;
-    //启用拖放
-    ui->treeWidget->setDragEnabled(true);
-
-    //设置显示将要被放置的位置
-    ui->treeWidget->setDropIndicatorShown(true);
-    //    //设置拖放模式为移动项目，否则为复制项目,这里是复制
-    ui->treeWidget->setDragDropMode(QAbstractItemView::InternalMove);
-
-    ui->treeWidget->setDefaultDropAction(Qt::MoveAction);
+    //启用拖放相关默认关闭,不然会显示拖放图标
+//    ui->treeWidget->setDragEnabled(true);
+//    //设置显示将要被放置的位置
+//    ui->treeWidget->setDropIndicatorShown(true);
+//        //设置拖放模式为移动项目，否则为复制项目,这里是复制
+//    ui->treeWidget->setDragDropMode(QAbstractItemView::InternalMove);
+//    ui->treeWidget->setDefaultDropAction(Qt::MoveAction);
 
 
 

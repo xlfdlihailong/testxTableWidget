@@ -27,22 +27,22 @@ void MainWindow::slotThreadSendData()
         pstring strid="序列号";
         plist<pmap<pstring,pstring>> lmdata;
         pmap<pstring,pstring> m0;
-        m0[strid]="111";
-        m0["name"]="xlfd";
+        m0.add(strid,"111");
+        m0.add("name","xlfd");
         lmdata.append(m0);
         pmap<pstring,pstring> m1;
-        m1[strid]="222";
-        m1["name"]="zero";
+        m1.add(strid,"222");
+        m1.add("name","zero");
         lmdata.append(m1);
         if(count>2)
         {
             pmap<pstring,pstring> m2;
-            m2[strid]="333";
-            m2["name"]="yyyy";
+            m2.add(strid,"333");
+            m2.add("name","yyyy");
             lmdata.append(m2);
             pmap<pstring,pstring> m3;
-            m3[strid]="444";
-            m3["name"]="uuuuu";
+            m3.add(strid,"444");
+            m3.add("name","uuuuu");
             lmdata.append(m3);
         }
         if(count>4)
