@@ -17,10 +17,10 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "xtablewidget.h"
+#include "xtreewidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -28,39 +28,44 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
+    xTreeWidget *ptree;
     xTableWidget *ptable;
     QMenuBar *menuBar;
-    QToolBar *mainToolBar;
-    QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(820, 641);
+        MainWindow->resize(1009, 642);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        horizontalLayout = new QHBoxLayout(centralWidget);
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        ptree = new xTreeWidget(centralWidget);
+        ptree->setObjectName(QStringLiteral("ptree"));
+
+        horizontalLayout->addWidget(ptree);
+
         ptable = new xTableWidget(centralWidget);
         ptable->setObjectName(QStringLiteral("ptable"));
 
         horizontalLayout->addWidget(ptable);
 
+
+        verticalLayout->addLayout(horizontalLayout);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 820, 23));
+        menuBar->setGeometry(QRect(0, 0, 1009, 23));
         MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(MainWindow);
-        statusBar->setObjectName(QStringLiteral("statusBar"));
-        MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
 

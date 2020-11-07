@@ -1,0 +1,60 @@
+[23:11:12.795]-[tid: 4700]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:12.795]-[tid: 4700]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:14.772]-[tid: 4700]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:14.774]-[tid: 4700]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:16.149]-[tid: 4700]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : ]
+[23:11:24.710]-[tid: 4760]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:24.711]-[tid: 4760]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:24.966]-[tid: 4760]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:24.969]-[tid: 4760]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:25.212]-[tid: 4760]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : ]
+[23:11:28.250]-[tid: 6864]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:28.251]-[tid: 6864]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:29.136]-[tid: 6864]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:29.139]-[tid: 6864]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:29.997]-[tid: 6864]-[plib.h:4148][buff : Soft assert at sshconnectionmanager.cpp:74
+]
+[23:11:30.001]-[tid: 6864]-[plib.h:4148][buff : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:11:30.005]-[tid: 6864]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : Soft assert at sshconnectionmanager.cpp:74
+7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:11:32.111]-[tid: 5308]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:32.112]-[tid: 5308]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:32.339]-[tid: 5308]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:32.342]-[tid: 5308]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:32.577]-[tid: 5308]-[plib.h:4148][buff : Soft assert at sshconnectionmanager.cpp:74
+]
+[23:11:32.580]-[tid: 5308]-[plib.h:4148][buff : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:11:32.585]-[tid: 5308]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : Soft assert at sshconnectionmanager.cpp:74
+7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:11:37.299]-[tid:  172]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:37.300]-[tid:  172]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:37.519]-[tid:  172]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:37.521]-[tid:  172]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:37.746]-[tid:  172]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : ]
+[23:11:42.829]-[tid:  504]-[mainqlib.cpp:14][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib\debug]
+[23:11:42.829]-[tid:  504]-[plib.h:3890][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22]
+[23:11:43.050]-[tid:  504]-[mainqlib.cpp:19][plib::xsh("106.12.222.93","df -h") : ]
+[23:11:43.053]-[tid:  504]-[plib.h:3890][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[23:11:43.276]-[tid:  504]-[plib.h:4148][buff : Soft assert at sshconnectionmanager.cpp:74
+]
+[23:11:43.280]-[tid:  504]-[plib.h:4148][buff : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:11:43.284]-[tid:  504]-[mainqlib.cpp:21][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : Soft assert at sshconnectionmanager.cpp:74
+7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]

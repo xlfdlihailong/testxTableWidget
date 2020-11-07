@@ -14,17 +14,33 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    ../../cpp/plib/plib.cpp \
-    ../qlib/qlib.cpp \
-    xTableWidget.cpp
+    qlib/qlib.cpp \
+    qlib/plib/plib.cpp \
+    qlib/plib/pxml.cpp \
+    qlib/plib/tinystr.cpp \
+    qlib/plib/tinyxml.cpp \
+    qlib/plib/tinyxmlerror.cpp \
+    qlib/plib/tinyxmlparser.cpp \
+    xtablewidget.cpp \
+    qtreewidgetex.cpp \
+    qtreewidgetexx.cpp \
+    xtreewidget.cpp
 
 HEADERS  += mainwindow.h \
-    ../../cpp/plib/plib.h \
-    ../qlib/qlib.h \
-    xTableWidget.h
+    qlib/qlib.h \
+    qlib/plib/plib.h \
+    qlib/plib/pxml.h \
+    qlib/plib/tinystr.h \
+    qlib/plib/tinyxml.h \
+    xtablewidget.h \
+    qtreewidgetex.h \
+    qtreewidgetexx.h \
+    xtreewidget.h
 
 FORMS    += mainwindow.ui \
-    xTableWidget.ui
+    xtablewidget.ui \
+    qtreewidgetexx.ui \
+    xtreewidget.ui
 
 RESOURCES += \
     xlfd.qrc

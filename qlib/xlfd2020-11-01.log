@@ -1,0 +1,17 @@
+[00:59:50.450]-[tid: 5968]-[plib.h:3863][strCMDAll : 106.12.222.93 "ps -ef|grep ssh" npants0703*** root 22 202011010059504505968.tmp]
+[00:59:50.791]-[tid: 5968]-[mainqlib.cpp:37][plib::xsh("106.12.222.93","ps -ef|grep ssh") : root      1638     1  0 Oct28 ?        00:00:16 /usr/sbin/sshd
+root     10506  1638  0 00:16 ?        00:00:00 sshd: root@pts/0 
+root     12693  1638  4 00:59 ?        00:00:00 sshd: root@notty 
+root     12695 12693  0 00:59 ?        00:00:00 bash -c ps -ef|grep ssh
+root     12705 12695  0 00:59 ?        00:00:00 grep ssh
+]
+[00:59:50.793]-[tid: 5968]-[plib.h:3863][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22 202011010059507915968.tmp]
+[00:59:51.048]-[tid: 5968]-[mainqlib.cpp:38][plib::xsh("106.12.222.93","df -h") : Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G  1.8G   36G   5% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+]
+[00:59:51.049]-[tid: 2164]-[plib.h:3863][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22 202011010059510492164.tmp]
+[00:59:51.306]-[tid: 2164]-[mainqlib.cpp:40][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]

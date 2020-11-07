@@ -1,0 +1,8 @@
+[01:17:41.812]-[tid: 9824]-[mainplib.cpp:7][udp.bind("224.0.0.3") : 0]
+ 0]
+[01:17:42.769]-[tid: 6884]-[mainplib.cpp:44][udp.bind("224.0.0.4") : 0]
+[01:17:42.770]-[tid: 9732]-[mainplib.cpp:27][udptest.recvx() : 5]
+[01:17:42.770]-[tid: 9824]-[mainplib.cpp:10][udp.recvx() : 5]
+[01:17:42.770]-[tid: 9824]-[mainplib.cpp:16][udp.sendx("xlfd",55.555) : 6]
+[01:17:42.770]-[tid: 6884]-[mainplib.cpp:48][udp.sendx("test",("zzzzz")) : 5]
+[01:17:42.771]-[tid: 6884]-[mainplib.cpp:52][udp.recvx() : 6]

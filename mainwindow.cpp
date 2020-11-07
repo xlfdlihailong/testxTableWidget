@@ -6,10 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->ptable->setHeaderText(QStringList()<<"序列号"<<"name"<<"不知道");
+    ui->ptable->setHeaderText(QStringList()<<"序列号"<<"名称"<<"测试");
+//    ui->ptable->setColWidth("名称",200);
 
-    connect(this,SIGNAL(sigUpdateTable(plist<pmap<pstring,pstring>>, pstring)),
-            ui->ptable,SLOT(slotUpdateTable(plist<pmap<pstring,pstring> >,pstring)));
+    connect(this,SIGNAL(sigUpdateTable(plist<pmap<pstring,pstring>>, int)),
+            ui->ptable,SLOT(slotUpdateTable(plist<pmap<pstring,pstring> >,int)));
     std::thread(&MainWindow::slotThreadSendData,this).detach();
 }
 
@@ -50,8 +51,8 @@ void MainWindow::slotThreadSendData()
             lmdata.deleteEnd();
         }
         //        hlog(lmdata);
-        sigUpdateTable(lmdata,strid);
-        plib::sleep(1000);
+        sigUpdateTable(lmdata);
+        plib::sleep(2000);
         count++;
     }
 }

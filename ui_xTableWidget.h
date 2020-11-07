@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'xTableWidget.ui'
+** Form generated from reading UI file 'xtablewidget.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.5.0
 **
@@ -31,20 +31,17 @@ public:
         if (Form->objectName().isEmpty())
             Form->setObjectName(QStringLiteral("Form"));
         Form->resize(1345, 781);
-        QFont font;
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setWeight(75);
-        Form->setFont(font);
         horizontalLayout = new QHBoxLayout(Form);
+        horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         tableWidget = new QTableWidget(Form);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(55, 55));
-        QFont font1;
-        font1.setBold(true);
-        font1.setWeight(75);
-        tableWidget->setFont(font1);
+        QFont font;
+        font.setFamily(QStringLiteral("DejaVu Sans Mono"));
+        font.setPointSize(11);
+        tableWidget->setFont(font);
         tableWidget->setWordWrap(false);
         tableWidget->setColumnCount(0);
 

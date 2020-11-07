@@ -1,0 +1,238 @@
+[00:00:36.892]-[tid: 7520]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:00:36.892]-[tid: 7520]-[plib.h:3892][strCMDAll : qxshnofile.exe 106.12.222.93 "df -h" npants0703*** root 22]
+[00:00:37.326]-[tid: 7520]-[mainqlib.cpp:37][plib::xsh("106.12.222.93","df -h") : ]
+[00:00:37.326]-[tid: 7520]-[plib.h:3892][strCMDAll : qxshnofile.exe 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22]
+[00:00:37.732]-[tid: 7520]-[mainqlib.cpp:39][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : ]
+[00:00:38.145]-[tid: 7520]-[mainqlib.cpp:47][plib::getCmdOutputFun("qxshnofile.exe 106.12.222.93 \"df -h\" npants0703*** root 22",show) : ]
+[00:00:38.573]-[tid: 7520]-[mainqlib.cpp:49][getCMD("qxshnofile.exe 106.12.222.93 \"df -h\" npants0703*** root 22") : ]
+[00:03:58.217]-[tid: 1080]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:03:58.602]-[tid: 1080]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 \"ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'\" npants0703*** root 22") : ]
+[00:04:38.328]-[tid: 2056]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:04:40.330]-[tid: 2056]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 \"ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'\" npants0703*** root 22") : ]
+[00:05:05.222]-[tid: 5416]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:05:50.953]-[tid: 7508]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:05:51.427]-[tid: 7508]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 \"ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'\" npants0703*** root 22") : ]
+[00:06:38.364]-[tid: 1268]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:06:38.811]-[tid: 1268]-[plib.h:4150][buff : /root
+]
+[00:06:38.812]-[tid: 1268]-[plib.h:4153][WSAGetLastError() : 183]
+[00:06:38.813]-[tid: 1268]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:06:49.917]-[tid: 7516]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:06:50.376]-[tid: 7516]-[plib.h:4150][buff : /root
+]
+[00:06:50.377]-[tid: 7516]-[plib.h:4153][WSAGetLastError() : 183]
+[00:06:50.379]-[tid: 7516]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:07:16.817]-[tid: 2920]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:07:17.235]-[tid: 2920]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:09:54.706]-[tid: 5264]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:09:55.179]-[tid: 5264]-[plib.h:4152][buff : /root
+]
+[00:09:55.180]-[tid: 5264]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:10:08.489]-[tid: 7852]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:10:08.994]-[tid: 7852]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:10:43.805]-[tid: 7868]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:10:44.211]-[tid: 7868]-[plib.h:4152][buff : /root
+]
+[00:10:44.213]-[tid: 7868]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:11:00.270]-[tid: 7456]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:11:00.740]-[tid: 7456]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:11:06.064]-[tid: 6112]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:11:06.527]-[tid: 6112]-[plib.h:4152][buff : /root
+]
+[00:11:06.530]-[tid: 6112]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:11:17.212]-[tid: 7100]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:11:17.629]-[tid: 7100]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:11:57.392]-[tid: 5256]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:11:57.819]-[tid: 5256]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:12:14.282]-[tid: 6232]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:12:14.743]-[tid: 6232]-[plib.h:4152][buff : /root
+]
+[00:12:14.745]-[tid: 6232]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:12:24.261]-[tid: 7536]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:12:24.668]-[tid: 7536]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:12:36.919]-[tid: 7124]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:12:37.336]-[tid: 7124]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:14:03.588]-[tid: 7304]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:14:04.069]-[tid: 7304]-[plib.h:4152][buff : /root
+]
+[00:14:04.070]-[tid: 7304]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[00:14:04.070]-[tid: 7304]-[qlib.h:482] [listPara : ("106.12.222.93", "pwd", "npants0703***", "root", "22")]
+[00:14:24.924]-[tid: 7224]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[00:14:25.443]-[tid: 7224]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[00:14:25.445]-[tid: 7224]-[qlib.h:482] [listPara : ("106.12.222.93", "pwd", "npants0703***", "root", "22")]
+[12:14:06.942]-[tid: 2916]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[12:14:07.370]-[tid: 2916]-[plib.h:4152][buff : /root
+]
+[12:14:07.372]-[tid: 2916]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[12:14:07.375]-[tid: 2916]-[qlib.h:482] [listPara : ()]
+[12:14:07.409]-[tid: 4708]-[mainqlib.cpp:31][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[12:14:46.493]-[tid: 4228]-[mainqlib.cpp:32][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[12:14:47.033]-[tid: 4228]-[plib.h:4152][buff : /root
+]
+[12:14:47.035]-[tid: 4228]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : /root
+]
+[12:14:47.055]-[tid: 1592]-[mainqlib.cpp:31][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[12:14:47.055]-[tid: 4228]-[plib.h:4152][buff : [12:14:47.055]-[tid: 1592]-[mainqlib.cpp:31][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+]
+[12:15:29.595]-[tid: 2476]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[12:15:29.615]-[tid: 1044]-[mainqlib.cpp:31][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+[12:15:29.615]-[tid: 2476]-[plib.h:4152][buff : [12:15:29.615]-[tid: 1044]-[mainqlib.cpp:31][plib::pwd() : C:\Users\Administrator\Desktop\xlib\windows\qlib]
+]
+[12:20:59.668]-[tid: 1576]-[mainqlib.cpp:48][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[12:20:59.669]-[tid: 1576]-[qlib.h:482] [listPara : ()]
+[12:21:40.997]-[tid: 1576]-[qlib.h:482] [listPara : ()]
+[12:22:07.793]-[tid: 3888]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[12:22:07.794]-[tid: 3888]-[qlib.h:518] [finish]
+[12:22:26.962]-[tid: 1776]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[12:22:26.964]-[tid: 1776]-[qlib.h:518] [finish]
+[12:22:50.693]-[tid: 2396]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[12:23:16.448]-[tid: 1472]-[qlib.h:508] [stres : /root
+ ]
+[12:24:18.302]-[tid: 1828]-[qlib.h:508] [stres : /root
+ ]
+[12:24:26.797]-[tid: 3960]-[qlib.h:508] [stres : /root
+ ]
+[12:24:31.211]-[tid: 2924]-[qlib.h:508] [stres : /root
+ ]
+[12:24:34.874]-[tid: 1172]-[qlib.h:508] [stres : /root
+ ]
+[12:24:51.303]-[tid: 4712]-[qlib.h:508] [stres : eth0      Link encap:Ethernet  HWaddr FA:16:3E:EA:67:D2  
+          inet addr:172.16.0.4  Bcast:172.16.15.255  Mask:255.255.240.0
+          inet6 addr: fe80::f816:3eff:feea:67d2/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:762278 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:750829 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:703011723 (670.4 MiB)  TX bytes:195208389 (186.1 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:154228 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:154228 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:84167340 (80.2 MiB)  TX bytes:84167340 (80.2 MiB)
+
+ ]
+[12:25:02.649]-[tid: 4988]-[qlib.h:508] [stres : eth0      Link encap:Ethernet  HWaddr FA:16:3E:EA:67:D2  
+          inet addr:172.16.0.4  Bcast:172.16.15.255  Mask:255.255.240.0
+          inet6 addr: fe80::f816:3eff:feea:67d2/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:762328 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:750880 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:703018522 (670.4 MiB)  TX bytes:195222175 (186.1 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:154228 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:154228 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:84167340 (80.2 MiB)  TX bytes:84167340 (80.2 MiB)
+
+ ]
+[20:39:14.436]-[tid: 6076]-[qlib.h:508] [stres : eth0      Link encap:Ethernet  HWaddr FA:16:3E:EA:67:D2  
+          inet addr:172.16.0.4  Bcast:172.16.15.255  Mask:255.255.240.0
+          inet6 addr: fe80::f816:3eff:feea:67d2/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:842554 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:833778 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:713243849 (680.2 MiB)  TX bytes:215629972 (205.6 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:173941 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:173941 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:94936235 (90.5 MiB)  TX bytes:94936235 (90.5 MiB)
+
+ ]
+[20:39:37.469]-[tid: 1912]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[20:39:41.908]-[tid: 1316]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[20:39:45.720]-[tid: 4836]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[20:40:11.275]-[tid: 5216]-[qlib.h:508] [stres : xlfdlihailong@126.com
+ ]
+[20:43:41.628]-[tid: 1288]-[qlib.h:508] [stres : eth0      Link encap:Ethernet  HWaddr FA:16:3E:EA:67:D2  
+          inet addr:172.16.0.4  Bcast:172.16.15.255  Mask:255.255.240.0
+          inet6 addr: fe80::f816:3eff:feea:67d2/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:843995 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:835300 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:713413187 (680.3 MiB)  TX bytes:215956227 (205.9 MiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:174121 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:174121 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:95034359 (90.6 MiB)  TX bytes:95034359 (90.6 MiB)
+
+ ]
+[21:07:43.282]-[tid: 3080]-[mainqlib.cpp:52][getCMD("qxshnofile.exe 106.12.222.93 \"df -h\" npants0703*** root 22") : ]
+[21:07:56.621]-[tid: 5604]-[mainqlib.cpp:52][getCMD("cmd /c qxshnofile.exe 106.12.222.93 \"df -h\" npants0703*** root 22") : ]
+[21:08:13.955]-[tid: 5448]-[mainqlib.cpp:49][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[21:08:28.045]-[tid: 1256]-[mainqlib.cpp:49][plib::getCmdOutput("qxshnofile.exe 106.12.222.93 pwd npants0703*** root 22") : ]
+[23:45:08.584]-[tid: 5880]-[plib.h:3892][strCMDAll : qxshnofile.exe 106.12.222.93 "df -h" npants0703*** root 22]
+[23:45:08.820]-[tid: 5880]-[mainqlib.cpp:38][plib::xsh("106.12.222.93","df -h") : ]
+[23:46:12.101]-[tid: 5724]-[plib.h:3863][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22 202010312346121015724.tmp]
+[23:46:12.380]-[tid: 5724]-[mainqlib.cpp:38][plib::xsh("106.12.222.93","df -h") : Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G  1.8G   36G   5% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+]
+[23:58:57.501]-[tid: 5592]-[plib.h:3863][strCMDAll : 106.12.222.93 "ps -ef|grep ssh" npants0703*** root 22 202010312358575015592.tmp]
+[23:58:57.788]-[tid: 5592]-[mainqlib.cpp:37][plib::xsh("106.12.222.93","ps -ef|grep ssh") : root      1638     1  0 Oct28 ?        00:00:16 /usr/sbin/sshd
+root     10020  1638  0 23:57 ?        00:00:00 sshd: [accepted] 
+sshd     10021 10020  0 23:58 ?        00:00:00 sshd: [net]      
+root     10022  1638  2 23:58 ?        00:00:00 sshd: root@notty 
+root     10024 10022  0 23:58 ?        00:00:00 bash -c ps -ef|grep ssh
+root     10034 10024  0 23:58 ?        00:00:00 grep ssh
+]
+[23:58:57.788]-[tid: 5592]-[plib.h:3863][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22 202010312358577885592.tmp]
+[23:58:58.056]-[tid: 5592]-[mainqlib.cpp:38][plib::xsh("106.12.222.93","df -h") : Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G  1.8G   36G   5% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+]
+[23:58:58.060]-[tid: 5680]-[plib.h:3863][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22 202010312358580595680.tmp]
+[23:58:58.348]-[tid: 5680]-[mainqlib.cpp:40][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]
+[23:59:21.200]-[tid: 1488]-[plib.h:3863][strCMDAll : 106.12.222.93 "ps -ef|grep ssh" npants0703*** root 22 202010312359212001488.tmp]
+[23:59:21.483]-[tid: 1488]-[mainqlib.cpp:37][plib::xsh("106.12.222.93","ps -ef|grep ssh") : root      1638     1  0 Oct28 ?        00:00:16 /usr/sbin/sshd
+root     10070  1638  3 23:58 ?        00:00:00 sshd: root@notty 
+root     10072 10070  0 23:58 ?        00:00:00 bash -c ps -ef|grep ssh
+root     10082 10072  0 23:58 ?        00:00:00 grep ssh
+]
+[23:59:21.484]-[tid: 1488]-[plib.h:3863][strCMDAll : 106.12.222.93 "df -h" npants0703*** root 22 202010312359214831488.tmp]
+[23:59:21.733]-[tid: 1488]-[mainqlib.cpp:38][plib::xsh("106.12.222.93","df -h") : Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G  1.8G   36G   5% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+]
+[23:59:21.734]-[tid: 5300]-[plib.h:3863][strCMDAll : 106.12.222.93 "ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'" npants0703*** root 22 202010312359217345300.tmp]
+[23:59:21.995]-[tid: 5300]-[mainqlib.cpp:40][plib::xsh("106.12.222.93","ls -l /root/Desktop |grep -v total| awk '{print $5,$9,$1}'") : 7522713 MySQL-client-community-5.1.58-1.rhel5.x86_64.rpm -rw-r--r--
+8890350 RealVNC631.pkg -rw-r--r--
+0 test.dat -rw-r--r--
+]

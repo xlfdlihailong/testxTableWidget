@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xlfd name="计算机软件班">
+    <x1 id="xlfd" res="kao">
+        <x2 name="张三" studentNo="13031001" sex="男" age="22">
+            <phone id="111" var="222">88208888</phone>
+            <address>西安市太白南路二号</address>
+	    <x3 name="nmh"/>
+        </x2>
+        <x2 name="李四" studentNo="13031002" sex="男" age="20">
+            <phone id="333" var="444">88206666</phone>
+	    <phone id="54" var="23">1221</phone>
+            <address>西安市光华路</address>
+	    <x3 name="nmh"/>
+        </x2>
+    </x1>
+    <x1 id="xlfd2" res="kao2">
+        <x2 name="张三2" studentNo="13031001" sex="男" age="22">
+            <phone id="111" var="222">88208888</phone>
+            <address>西安市太白南路二号</address>
+            <x3 name="nmh"/>
+        </x2>
+        <x2 name="李四2" studentNo="13031002" sex="男" age="20">
+            <phone id="333" var="444">88206666</phone>
+            <address>西安市光华路</address>
+	    <x3 name="nmh"/>
+        </x2>
+    </x1>
+
+</xlfd>
+
