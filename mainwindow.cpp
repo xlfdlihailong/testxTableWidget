@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    hlog(plib::pwd());
     ui->ptable->setHeaderText(QStringList()<<"序列号"<<"名称"<<"测试");
 //    ui->ptable->setColWidth("名称",200);
 
