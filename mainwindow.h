@@ -17,9 +17,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 signals:
-    void sigUpdateTable(plist<pmap<pstring,pstring>> lmdata, int keyid=0);
+
 private slots:
-    void slotThreadSendData();
+
 private:
     Ui::MainWindow *ui;
 };

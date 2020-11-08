@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[7];
-    char stringdata0[89];
+    QByteArrayData data[1];
+    char stringdata0[11];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -29,18 +29,10 @@ struct qt_meta_stringdata_MainWindow_t {
     )
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 14), // "sigUpdateTable"
-QT_MOC_LITERAL(2, 26, 0), // ""
-QT_MOC_LITERAL(3, 27, 29), // "plist<pmap<pstring,pstring> >"
-QT_MOC_LITERAL(4, 57, 6), // "lmdata"
-QT_MOC_LITERAL(5, 64, 5), // "keyid"
-QT_MOC_LITERAL(6, 70, 18) // "slotThreadSendData"
+QT_MOC_LITERAL(0, 0, 10) // "MainWindow"
 
     },
-    "MainWindow\0sigUpdateTable\0\0"
-    "plist<pmap<pstring,pstring> >\0lmdata\0"
-    "keyid\0slotThreadSendData"
+    "MainWindow"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,51 +42,22 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       0,    0, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
-
- // signals: name, argc, parameters, tag, flags
-       1,    2,   29,    2, 0x06 /* Public */,
-       1,    1,   34,    2, 0x26 /* Public | MethodCloned */,
-
- // slots: name, argc, parameters, tag, flags
-       6,    0,   37,    2, 0x08 /* Private */,
-
- // signals: parameters
-    QMetaType::Void, 0x80000000 | 3, QMetaType::Int,    4,    5,
-    QMetaType::Void, 0x80000000 | 3,    4,
-
- // slots: parameters
-    QMetaType::Void,
+       0,       // signalCount
 
        0        // eod
 };
 
 void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        MainWindow *_t = static_cast<MainWindow *>(_o);
-        Q_UNUSED(_t)
-        switch (_id) {
-        case 0: _t->sigUpdateTable((*reinterpret_cast< plist<pmap<pstring,pstring> >(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->sigUpdateTable((*reinterpret_cast< plist<pmap<pstring,pstring> >(*)>(_a[1]))); break;
-        case 2: _t->slotThreadSendData(); break;
-        default: ;
-        }
-    } else if (_c == QMetaObject::IndexOfMethod) {
-        int *result = reinterpret_cast<int *>(_a[0]);
-        void **func = reinterpret_cast<void **>(_a[1]);
-        {
-            typedef void (MainWindow::*_t)(plist<pmap<pstring,pstring>> , int );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&MainWindow::sigUpdateTable)) {
-                *result = 0;
-            }
-        }
-    }
+    Q_UNUSED(_o);
+    Q_UNUSED(_id);
+    Q_UNUSED(_c);
+    Q_UNUSED(_a);
 }
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -121,22 +84,6 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
-            *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
-    }
     return _id;
-}
-
-// SIGNAL 0
-void MainWindow::sigUpdateTable(plist<pmap<pstring,pstring>> _t1, int _t2)
-{
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_END_MOC_NAMESPACE

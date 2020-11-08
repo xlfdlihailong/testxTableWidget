@@ -9,8 +9,8 @@ xTableWidget::xTableWidget(QWidget *parent) :
     //    //封装设置表头字体为楷体14号最好看
     QHeaderView* pheader=ui->tableWidget->horizontalHeader();
     //    pheader->setStyleSheet("QHeaderView::section{background-color:rgb(40,143,218);font:14pt 'DejaVu Sans Mono';color: white;};");
-//     pheader->setStyleSheet("QHeaderView::section{font:12pt 'DejaVu Sans Mono';};");
-//     pheader->setStyleSheet("QHeaderView::section{font:bold 12pt 'DejaVu Sans Mono';};");
+    //     pheader->setStyleSheet("QHeaderView::section{font:12pt 'DejaVu Sans Mono';};");
+    //     pheader->setStyleSheet("QHeaderView::section{font:bold 12pt 'DejaVu Sans Mono';};");
     pheader->setStyleSheet("QHeaderView::section{font:bold 11pt '楷体';};");
 
     //header的个数,列个数
@@ -247,9 +247,10 @@ int xTableWidget::findIndexByIndexColumn(QString strValueToFind, int indexCol)
 
 void xTableWidget::slotUpdateTable(plist<pmap<pstring, pstring> > lmdata, int keyid)
 {
-    hlog(lmdata);
+    //    hlog(lmdata);
     //先获取原来的行数,如果是0,则说明是第一次,直接赋值就行
     int ilenold=this->getRowCount();
+//    hlog(ilenold);
     if(ilenold==0)
     {
         this->setRowCount(lmdata.size());
@@ -271,6 +272,7 @@ void xTableWidget::slotUpdateTable(plist<pmap<pstring, pstring> > lmdata, int ke
             pmap<pstring,pstring> mapi=lmdata[i];
 
             pstring strNameKeyColumn=mapi.getValue(keyid);
+            //            hlog(strNameKeyColumn);
             //先找到索引
             int ifind=this->findIndexByIndexColumn(strNameKeyColumn.c_str(),keyid);
             //            hlog(ifind);
@@ -279,6 +281,7 @@ void xTableWidget::slotUpdateTable(plist<pmap<pstring, pstring> > lmdata, int ke
             {
                 //                hlog("######## nofind #########");
                 int indexAdd=this->addRow();
+                //                hlog(indexAdd);
                 for(int j=0;j<mapi.size();j++)
                 {
                     this->setItemText(indexAdd,j,mapi.getValue(j).c_str());
@@ -294,35 +297,36 @@ void xTableWidget::slotUpdateTable(plist<pmap<pstring, pstring> > lmdata, int ke
                 }
             }
         }
-        //检查数据个数是否小于原来行数,如果小于,则要删数据
-        if(ilenold>lmdata.size())
-        {
-            //            hlog("##### < #####");
+        //        hlog(listKeyId,ilenold,lmdata.size());
+        //        hlog(this->getRowCount());
+        //        for(int i=0;i<this->getRowCount();i++)
+        //            hlog(this->getItemText(i,keyid));
 
-            //比对数据keyid和列表keyid找出少的
-            int iCountReduce=ilenold-listKeyId.size();
-            hlog(iCountReduce);
-            hlog(listKeyId);
-            //要找出少的列表,都删掉,一条一条的删
-            for(int i=0;i<iCountReduce;i++)
+        //比对数据keyid和列表keyid找出少的
+        int iCountReduce=ilenold-listKeyId.size();
+        //            hlog(iCountReduce);
+        //            hlog(listKeyId);
+        //要找出少的列表,都删掉,一条一条的删
+        for(int i=0;i<iCountReduce;i++)
+        {
+            //                hlog(this->getRowCount());
+            //遍历界面keyid
+            for(int j=0;j<this->getRowCount();j++)
             {
-                //遍历界面keyid
-                for(int j=0;j<this->getRowCount();j++)
+                pstring strKeyIdUI=this->getItemText(j,keyid).toStdString();
+
+                //如果列表中不包含,说明这一行没了,要删除
+                if(!listKeyId.contains(strKeyIdUI))
                 {
-                    pstring strKeyIdUI=this->getItemText(j,keyid).toStdString();
-                    //如果列表中不包含,说明这一行没了,要删除
-                    if(!listKeyId.contains(strKeyIdUI))
-                    {
-                        this->removeRow(j);
-                        break;
-                    }
+                    //                        hlog(i,strKeyIdUI);
+                    this->removeRow(j);
+
+                    break;
                 }
             }
         }
     }
 }
-
-
 
 void xTableWidget::setToBottom()
 {
@@ -366,7 +370,7 @@ void xTableWidget::setItemText(int i, int j, QString str)
         //        qDebug()<<"####"<<(pItemStr!=NULL)<<"##### "<<i<<","<<j<<" "<<str<<" ######";
         pItemStr->setText(str);
         //        //刷新
-        //        ui->tableWidget->update();
+
     }
     else
     {
@@ -374,10 +378,10 @@ void xTableWidget::setItemText(int i, int j, QString str)
         //不存在，新建
         pItemStr=new QTableWidgetItem(str);
         //居中
-//        pItemStr->setTextAlignment(Qt::AlignCenter);//暂时不居中
+        //        pItemStr->setTextAlignment(Qt::AlignCenter);//暂时不居中
         ui->tableWidget->setItem(i,j,pItemStr);
     }
-
+    ui->tableWidget->update();
     //有问题，加了会出现timer的问题QBasicTimer can only be used with threads started with QThread
     //显示最后一行 //如果滚动的话，一直显示最后一行
     //    ui->tableWidget->scrollToBottom();
@@ -385,7 +389,7 @@ void xTableWidget::setItemText(int i, int j, QString str)
     //    /////////////////
     //    int t=ui->tableWidget->verticalScrollBar()->maximum();
     //    ui->tableWidget->verticalScrollBar()->setValue(t);//设置滚动条滚动到最大值
-//    this->setToBottom();
+    //    this->setToBottom();
 }
 
 void xTableWidget::setItemText(int row, QString strNameCol, QString str)
@@ -456,7 +460,7 @@ QString xTableWidget::getItemText(int row, QString strNameCol)
 void xTableWidget::removeRow(int row)
 {
     ui->tableWidget->removeRow(row);
-    this->setRowCount(this->getRowCount()-1);
+    this->setRowCount(this->getRowCount());
 }
 
 void xTableWidget::clear()

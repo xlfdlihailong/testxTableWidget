@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_xTreeWidget_t {
-    QByteArrayData data[15];
-    char stringdata0[164];
+    QByteArrayData data[16];
+    char stringdata0[179];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,21 +34,23 @@ QT_MOC_LITERAL(1, 12, 15), // "sigShowMaxIndex"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 3), // "url"
 QT_MOC_LITERAL(4, 33, 8), // "sigClick"
-QT_MOC_LITERAL(5, 42, 7), // "popMenu"
-QT_MOC_LITERAL(6, 50, 9), // "itemClick"
-QT_MOC_LITERAL(7, 60, 16), // "QTreeWidgetItem*"
-QT_MOC_LITERAL(8, 77, 4), // "item"
-QT_MOC_LITERAL(9, 82, 6), // "column"
-QT_MOC_LITERAL(10, 89, 15), // "itemDoubleClick"
-QT_MOC_LITERAL(11, 105, 14), // "slotDeleteItem"
-QT_MOC_LITERAL(12, 120, 11), // "slotAddItem"
-QT_MOC_LITERAL(13, 132, 16), // "slotAddItemAfter"
-QT_MOC_LITERAL(14, 149, 14) // "slotItemUpdate"
+QT_MOC_LITERAL(5, 42, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(6, 59, 4), // "item"
+QT_MOC_LITERAL(7, 64, 6), // "column"
+QT_MOC_LITERAL(8, 71, 14), // "sigDoubleClick"
+QT_MOC_LITERAL(9, 86, 7), // "popMenu"
+QT_MOC_LITERAL(10, 94, 9), // "itemClick"
+QT_MOC_LITERAL(11, 104, 15), // "itemDoubleClick"
+QT_MOC_LITERAL(12, 120, 14), // "slotDeleteItem"
+QT_MOC_LITERAL(13, 135, 11), // "slotAddItem"
+QT_MOC_LITERAL(14, 147, 16), // "slotAddItemAfter"
+QT_MOC_LITERAL(15, 164, 14) // "slotItemUpdate"
 
     },
     "xTreeWidget\0sigShowMaxIndex\0\0url\0"
-    "sigClick\0popMenu\0itemClick\0QTreeWidgetItem*\0"
-    "item\0column\0itemDoubleClick\0slotDeleteItem\0"
+    "sigClick\0QTreeWidgetItem*\0item\0column\0"
+    "sigDoubleClick\0popMenu\0itemClick\0"
+    "itemDoubleClick\0slotDeleteItem\0"
     "slotAddItem\0slotAddItemAfter\0"
     "slotItemUpdate"
 };
@@ -60,34 +62,36 @@ static const uint qt_meta_data_xTreeWidget[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   59,    2, 0x06 /* Public */,
-       4,    1,   62,    2, 0x06 /* Public */,
+       1,    1,   64,    2, 0x06 /* Public */,
+       4,    2,   67,    2, 0x06 /* Public */,
+       8,    2,   72,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    1,   65,    2, 0x08 /* Private */,
-       6,    2,   68,    2, 0x08 /* Private */,
-      10,    2,   73,    2, 0x08 /* Private */,
-      11,    0,   78,    2, 0x08 /* Private */,
-      12,    0,   79,    2, 0x08 /* Private */,
-      13,    0,   80,    2, 0x08 /* Private */,
-      14,    0,   81,    2, 0x08 /* Private */,
+       9,    1,   77,    2, 0x08 /* Private */,
+      10,    2,   80,    2, 0x08 /* Private */,
+      11,    2,   85,    2, 0x08 /* Private */,
+      12,    0,   90,    2, 0x08 /* Private */,
+      13,    0,   91,    2, 0x08 /* Private */,
+      14,    0,   92,    2, 0x08 /* Private */,
+      15,    0,   93,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
+    QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QPoint,    2,
-    QMetaType::Void, 0x80000000 | 7, QMetaType::Int,    8,    9,
-    QMetaType::Void, 0x80000000 | 7, QMetaType::Int,    8,    9,
+    QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
+    QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -103,14 +107,15 @@ void xTreeWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sigShowMaxIndex((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->sigClick((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 2: _t->popMenu((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
-        case 3: _t->itemClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 4: _t->itemDoubleClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 5: _t->slotDeleteItem(); break;
-        case 6: _t->slotAddItem(); break;
-        case 7: _t->slotAddItemAfter(); break;
-        case 8: _t->slotItemUpdate(); break;
+        case 1: _t->sigClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 2: _t->sigDoubleClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 3: _t->popMenu((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
+        case 4: _t->itemClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 5: _t->itemDoubleClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 6: _t->slotDeleteItem(); break;
+        case 7: _t->slotAddItem(); break;
+        case 8: _t->slotAddItemAfter(); break;
+        case 9: _t->slotItemUpdate(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -123,9 +128,15 @@ void xTreeWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
             }
         }
         {
-            typedef void (xTreeWidget::*_t)(QString );
+            typedef void (xTreeWidget::*_t)(QTreeWidgetItem * , int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&xTreeWidget::sigClick)) {
                 *result = 1;
+            }
+        }
+        {
+            typedef void (xTreeWidget::*_t)(QTreeWidgetItem * , int );
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&xTreeWidget::sigDoubleClick)) {
+                *result = 2;
             }
         }
     }
@@ -156,13 +167,13 @@ int xTreeWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }
@@ -175,9 +186,16 @@ void xTreeWidget::sigShowMaxIndex(QString _t1)
 }
 
 // SIGNAL 1
-void xTreeWidget::sigClick(QString _t1)
+void xTreeWidget::sigClick(QTreeWidgetItem * _t1, int _t2)
 {
-    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void xTreeWidget::sigDoubleClick(QTreeWidgetItem * _t1, int _t2)
+{
+    void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_END_MOC_NAMESPACE

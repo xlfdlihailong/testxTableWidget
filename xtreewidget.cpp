@@ -29,21 +29,21 @@ xTreeWidget::xTreeWidget(QWidget *parent) :
 
 
 
-    QTreeWidgetItem*proot=this->addRoot(("根节点"));
-    QTreeWidgetItem* pjoint2=this->newJoint(("吊车架"));
-    QTreeWidgetItem* pjoint3=this->newJoint(("三级节点"));
-    QTreeWidgetItem* pjoint4=this->newJoint(("钢柱"));
-    QTreeWidgetItem* pjoint5=this->newJoint(("xlfdQProcess"));
+//    QTreeWidgetItem*proot=this->addRoot(("根节点"));
+//    QTreeWidgetItem* pjoint2=this->newJoint(("吊车架"));
+//    QTreeWidgetItem* pjoint3=this->newJoint(("三级节点"));
+//    QTreeWidgetItem* pjoint4=this->newJoint(("钢柱"));
+//    QTreeWidgetItem* pjoint5=this->newJoint(("xlfdQProcess"));
 
-    proot->insertChild(0,pjoint2);
-    pjoint2->insertChild(0,pjoint3);
-    proot->addChild(pjoint4);
-    proot->insertChild(2,pjoint5);
+//    proot->insertChild(0,pjoint2);
+//    pjoint2->insertChild(0,pjoint3);
+//    proot->addChild(pjoint4);
+//    proot->insertChild(2,pjoint5);
 
-//    QTreeWidgetItem* proot2=this->addRoot("根节点2");
-    //节点始终保持展开
+////    QTreeWidgetItem* proot2=this->addRoot("根节点2");
+//    //节点始终保持展开
 
-    ui->treeWidget->expandAll(); //结点全部展开
+//    ui->treeWidget->expandAll(); //结点全部展开
 
 
     //检测点击事件
@@ -59,16 +59,18 @@ void xTreeWidget::itemClick(QTreeWidgetItem *item, int column)
     if(NULL==parent) //注意：最顶端项是没有父节点的
         return;
     int row = parent->indexOfChild(item); //item在父项中的节点行号(从0开始)
-    qDebug()<<row;
-//    pstring info=plib::toGBK((pstring()<<"点击了树节点的第"<<row<<"行").c_str());
-//    hlog(info);
+//    qDebug()<<row;
+    pstring info=plib::toGBK((pstring()<<"点击了树节点的第"<<row<<"行").c_str());
+    hlog(info);
+    sigClick(item,column);
 
+    //获取数据从其他地方
     //    qDebug()<<item->checkState(0);
-    QString strRtsp=(item->data(0,Qt::UserRole+1).toString());
+//    QString strRtsp=(item->data(0,Qt::UserRole+1).toString());
 //    hlog(strRtsp.toStdString());
 //    DataTree dt=item->data(0,Qt::UserRole+1).value<DataTree>();
     //发出限号给显示组件
-    sigClick(strRtsp);
+//    sigClick(strRtsp);
 }
 
 void xTreeWidget::itemDoubleClick(QTreeWidgetItem *item, int column)
@@ -105,6 +107,9 @@ void xTreeWidget::itemDoubleClick(QTreeWidgetItem *item, int column)
             item->setCheckState(0,Qt::Checked);
         }
     }
+
+    hlog(item->text(column));
+    sigDoubleClick(item,column);
 }
 
 

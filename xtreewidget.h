@@ -53,7 +53,8 @@ public:
     bool inputbox(QString &strInput, QString strdefault=QString::fromLocal8Bit("您要输入的文本"));
 signals:
     void sigShowMaxIndex(QString url);
-    void sigClick(QString url);
+    void sigClick(QTreeWidgetItem *item, int column);
+    void sigDoubleClick(QTreeWidgetItem *item, int column);
 private slots:
     void popMenu(const QPoint &);
     void itemClick(QTreeWidgetItem *item, int column);

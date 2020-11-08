@@ -13,13 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include "xtablewidget.h"
-#include "xtreewidget.h"
+#include "xfilebrowserlocal.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -27,46 +26,30 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QHBoxLayout *horizontalLayout_2;
-    QHBoxLayout *horizontalLayout;
-    xTreeWidget *ptree;
-    xTableWidget *ptable;
+    QVBoxLayout *verticalLayout;
+    xFileBrowserLocal *widget;
     QMenuBar *menuBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1009, 642);
+        MainWindow->resize(1246, 804);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        horizontalLayout_2 = new QHBoxLayout(centralWidget);
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        ptree = new xTreeWidget(centralWidget);
-        ptree->setObjectName(QStringLiteral("ptree"));
-        ptree->setMinimumSize(QSize(55, 55));
-        ptree->setMaximumSize(QSize(300, 16777215));
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        widget = new xFileBrowserLocal(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
 
-        horizontalLayout->addWidget(ptree);
-
-        ptable = new xTableWidget(centralWidget);
-        ptable->setObjectName(QStringLiteral("ptable"));
-        ptable->setMinimumSize(QSize(55, 55));
-
-        horizontalLayout->addWidget(ptable);
-
-
-        horizontalLayout_2->addLayout(horizontalLayout);
+        verticalLayout->addWidget(widget);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1009, 23));
+        menuBar->setGeometry(QRect(0, 0, 1246, 23));
         MainWindow->setMenuBar(menuBar);
 
         retranslateUi(MainWindow);

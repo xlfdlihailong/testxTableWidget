@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     qlib/plib/tinyxmlparser.cpp \
     xtablewidget.cpp \
     xtreewidget.cpp \
-    qtreewidgetexx.cpp
+    qtreewidgetexx.cpp \
+    xfilebrowserlocal.cpp
 
 HEADERS  += mainwindow.h \
     qlib/qlib.h \
@@ -33,12 +34,14 @@ HEADERS  += mainwindow.h \
     qlib/plib/tinyxml.h \
     xtablewidget.h \
     xtreewidget.h \
-    qtreewidgetexx.h
+    qtreewidgetexx.h \
+    xfilebrowserlocal.h
 
 FORMS    += mainwindow.ui \
     xtablewidget.ui \
     xtreewidget.ui \
-    qtreewidgetexx.ui
+    qtreewidgetexx.ui \
+    xfilebrowserlocal.ui
 
 RESOURCES += \
     xlfd.qrc

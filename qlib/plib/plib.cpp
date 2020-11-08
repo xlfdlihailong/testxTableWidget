@@ -682,7 +682,12 @@ pstring plib::pwd()
 {
     char buf[1024];
     getcwd(buf, sizeof(buf));
-    return string(buf);
+    pstring str(buf);
+    //结果是这种的C:\Users\Administrator\Desktop\xlib\windows\projects\testxTableWidget
+    //要改成C:/Users/Administrator这种的
+    pliststring lres=str.split("\\");
+    hlog(lres);
+    return lres.join("/");
 }
 
 

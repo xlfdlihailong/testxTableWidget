@@ -4488,6 +4488,7 @@ public:
         }
     }
     static plist<pstring> getAllFilesRecurion(string path);
+    // c:/Users/...
     static pstring pwd();
     /*读取配置文件
      * [section]
