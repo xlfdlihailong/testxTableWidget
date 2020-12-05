@@ -22,7 +22,7 @@ public:
     explicit xTreeWidget(QWidget *parent = nullptr);
     ~xTreeWidget();
 
-
+    void expandItem(QTreeWidgetItem* pitem);
     void expandAll();
     QTreeWidgetItem* newJoint(QString name);
     QTreeWidgetItem* addRoot(QString name);

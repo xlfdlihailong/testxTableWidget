@@ -14,7 +14,7 @@ xFileBrowserLocal::xFileBrowserLocal(QWidget *parent) :
             ui->ptab,SLOT(slotUpdateTable(plist<pmap<pstring,pstring> >,int)));
     ui->ptab->setColWidth(strname.c_str(),300);
 
-    //类似windows文件管理器,把左边tree控件设置为显示我的电脑以及各个盘并展开
+    //类似windows文件管理器,把左边tree控件设置为显示我的电脑以及各个盘并展开到下一级
     ui->ptree->addRoot("我的电脑");
     plist<pmap<pstring,pstring>> lmall=(this->getDirInfo("我的电脑"));
 
@@ -24,10 +24,21 @@ xFileBrowserLocal::xFileBrowserLocal(QWidget *parent) :
         hlog(name);
         auto joint=ui->ptree->newJoint(name.c_str());
         ui->ptree->root()->addChild(joint);
-        ui->ptree->expandAll();
-        pmap<pstring,QTreeWidgetItem*> mapi;
-        mapi.add(name,joint);
+        //对每个盘再增加下一级的任务
+        auto infoDir=this->getDirInfo(name);
+        //        hlog(infoDir);
+        //    this->strpwd=strClick;
+        //        this->showDirInfo(this->strpwd);
+        //加入到tree并展开
+        for(pmap<pstring,pstring> mapi:infoDir)
+        {
+            hlog(mapi[strname]);
+            QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[strname].c_str());
+            joint->addChild(pchild);
+        }
+        //        ui->ptree->expandAll();
     }
+    ui->ptree->expandItem(ui->ptree->root());
     connect(ui->ptree,SIGNAL(sigDoubleClick(QTreeWidgetItem*,int)),this,
             SLOT(slotTreeDoubleClick(QTreeWidgetItem*,int)));
     connect(ui->ptree,SIGNAL(sigClick(QTreeWidgetItem*,int)),this,
@@ -273,20 +284,47 @@ void xFileBrowserLocal::slotThreadSendData()
         plib::sleep(1000);
     }
 }
-
+//双击的话,要赋值下一级
 void xFileBrowserLocal::slotTreeDoubleClick(QTreeWidgetItem *item, int column)
 {
-    //    pstring strClick=(item->text(column)).toStdString();
-    ////    auto infoDir=this->getDirInfo(strClick);
-    ////    hlog(infoDir);
-    //    this->strpwd=strClick;
-    //    this->showDirInfo(this->strpwd);
-}
+    pstring strClick=(item->text(column)).toStdString();
+    hlog(strClick);
+    pstring strPathFull=strClick;
 
+    if(strClick.substr(1,2)!=":/")
+    {
+        //这个string只是当前节点的name,要获取所有节点加起来,才是完整路径
+        QTreeWidgetItem* pfather=item->parent();
+        while(1)
+        {
+            pstring text=pfather->text(column).toStdString();
+            hlog(text);
+            if(text.substr(1,2)==":/")
+            {
+                strPathFull=text+strClick;
+                break;
+            }
+            pfather=pfather->parent();
+            strPathFull=text+strClick;
+        }
+    }
+    hlog(strPathFull);
+    auto infoDir=this->getDirInfo(strPathFull);
+    //        hlog(infoDir);
+    //    this->strpwd=strClick;
+    //        this->showDirInfo(this->strpwd);
+    //加入到tree并展开
+    for(pmap<pstring,pstring> mapi:infoDir)
+    {
+        //        hlog(mapi[strname]);
+        QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[strname].c_str());
+        item->addChild(pchild);
+    }
+}
 void xFileBrowserLocal::slotTreeClick(QTreeWidgetItem *item, int column)
 {
     pstring strClick=(item->text(column)).toStdString();
     this->strpwd=strClick;
     auto infoDir=this->showDirInfo(this->strpwd);
-    hlog(infoDir);
+    //    hlog(infoDir);
 }

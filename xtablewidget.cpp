@@ -10,8 +10,8 @@ xTableWidget::xTableWidget(QWidget *parent) :
     QHeaderView* pheader=ui->tableWidget->horizontalHeader();
     //    pheader->setStyleSheet("QHeaderView::section{background-color:rgb(40,143,218);font:14pt 'DejaVu Sans Mono';color: white;};");
     //     pheader->setStyleSheet("QHeaderView::section{font:12pt 'DejaVu Sans Mono';};");
-    //     pheader->setStyleSheet("QHeaderView::section{font:bold 12pt 'DejaVu Sans Mono';};");
-    pheader->setStyleSheet("QHeaderView::section{font:bold 11pt '楷体';};");
+         pheader->setStyleSheet("QHeaderView::section{font:bold 12pt 'DejaVu Sans Mono';};");
+
 
     //header的个数,列个数
     //    qDebug()<<ui->tableWidget->horizontalHeader()->count();

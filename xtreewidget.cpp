@@ -118,6 +118,11 @@ xTreeWidget::~xTreeWidget()
     delete ui;
 }
 
+void xTreeWidget::expandItem(QTreeWidgetItem *pitem)
+{
+    ui->treeWidget->expandItem(pitem);
+}
+
 void xTreeWidget::expandAll()
 {
     ui->treeWidget->expandAll();
