@@ -38,10 +38,6 @@ public:
         tableWidget = new QTableWidget(Form);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
         tableWidget->setMinimumSize(QSize(55, 55));
-        QFont font;
-        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font.setPointSize(11);
-        tableWidget->setFont(font);
         tableWidget->setWordWrap(false);
         tableWidget->setColumnCount(0);
 

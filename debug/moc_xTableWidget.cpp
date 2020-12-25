@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_xTableWidget_t {
-    QByteArrayData data[19];
-    char stringdata0[279];
+    QByteArrayData data[20];
+    char stringdata0[274];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,24 +34,25 @@ QT_MOC_LITERAL(1, 13, 14), // "sigDoubleClick"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 3), // "row"
 QT_MOC_LITERAL(4, 33, 3), // "col"
-QT_MOC_LITERAL(5, 37, 15), // "slotUpdateTable"
-QT_MOC_LITERAL(6, 53, 29), // "plist<pmap<pstring,pstring> >"
-QT_MOC_LITERAL(7, 83, 6), // "lmdata"
-QT_MOC_LITERAL(8, 90, 5), // "keyid"
-QT_MOC_LITERAL(9, 96, 26), // "on_tableWidget_cellClicked"
-QT_MOC_LITERAL(10, 123, 6), // "column"
-QT_MOC_LITERAL(11, 130, 44), // "on_stuTableWidget_customConte..."
-QT_MOC_LITERAL(12, 175, 3), // "pos"
-QT_MOC_LITERAL(13, 179, 12), // "sortByColumn"
-QT_MOC_LITERAL(14, 192, 32), // "on_tableWidget_cellDoubleClicked"
-QT_MOC_LITERAL(15, 225, 10), // "slotSelect"
-QT_MOC_LITERAL(16, 236, 12), // "slotUnSelect"
-QT_MOC_LITERAL(17, 249, 13), // "slotSelectAll"
-QT_MOC_LITERAL(18, 263, 15) // "slotUnSelectAll"
+QT_MOC_LITERAL(5, 37, 5), // "clear"
+QT_MOC_LITERAL(6, 43, 15), // "slotUpdateTable"
+QT_MOC_LITERAL(7, 59, 18), // "plist<pliststring>"
+QT_MOC_LITERAL(8, 78, 6), // "lmdata"
+QT_MOC_LITERAL(9, 85, 5), // "keyid"
+QT_MOC_LITERAL(10, 91, 26), // "on_tableWidget_cellClicked"
+QT_MOC_LITERAL(11, 118, 6), // "column"
+QT_MOC_LITERAL(12, 125, 44), // "on_stuTableWidget_customConte..."
+QT_MOC_LITERAL(13, 170, 3), // "pos"
+QT_MOC_LITERAL(14, 174, 12), // "sortByColumn"
+QT_MOC_LITERAL(15, 187, 32), // "on_tableWidget_cellDoubleClicked"
+QT_MOC_LITERAL(16, 220, 10), // "slotSelect"
+QT_MOC_LITERAL(17, 231, 12), // "slotUnSelect"
+QT_MOC_LITERAL(18, 244, 13), // "slotSelectAll"
+QT_MOC_LITERAL(19, 258, 15) // "slotUnSelectAll"
 
     },
     "xTableWidget\0sigDoubleClick\0\0row\0col\0"
-    "slotUpdateTable\0plist<pmap<pstring,pstring> >\0"
+    "clear\0slotUpdateTable\0plist<pliststring>\0"
     "lmdata\0keyid\0on_tableWidget_cellClicked\0"
     "column\0on_stuTableWidget_customContextMenuRequested\0"
     "pos\0sortByColumn\0on_tableWidget_cellDoubleClicked\0"
@@ -66,7 +67,7 @@ static const uint qt_meta_data_xTableWidget[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,28 +75,30 @@ static const uint qt_meta_data_xTableWidget[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   64,    2, 0x06 /* Public */,
+       1,    2,   69,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    2,   69,    2, 0x08 /* Private */,
-       9,    2,   74,    2, 0x08 /* Private */,
-      11,    1,   79,    2, 0x08 /* Private */,
-      13,    1,   82,    2, 0x08 /* Private */,
-      14,    2,   85,    2, 0x08 /* Private */,
-      15,    0,   90,    2, 0x08 /* Private */,
-      16,    0,   91,    2, 0x08 /* Private */,
-      17,    0,   92,    2, 0x08 /* Private */,
-      18,    0,   93,    2, 0x08 /* Private */,
+       5,    0,   74,    2, 0x08 /* Private */,
+       6,    2,   75,    2, 0x08 /* Private */,
+      10,    2,   80,    2, 0x08 /* Private */,
+      12,    1,   85,    2, 0x08 /* Private */,
+      14,    1,   88,    2, 0x08 /* Private */,
+      15,    2,   91,    2, 0x08 /* Private */,
+      16,    0,   96,    2, 0x08 /* Private */,
+      17,    0,   97,    2, 0x08 /* Private */,
+      18,    0,   98,    2, 0x08 /* Private */,
+      19,    0,   99,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 6, QMetaType::Int,    7,    8,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,   10,
-    QMetaType::Void, QMetaType::QPoint,   12,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 7, QMetaType::Int,    8,    9,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,   11,
+    QMetaType::Void, QMetaType::QPoint,   13,
     QMetaType::Void, QMetaType::Int,    4,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,   10,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,   11,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -111,15 +114,16 @@ void xTableWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sigDoubleClick((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->slotUpdateTable((*reinterpret_cast< plist<pmap<pstring,pstring> >(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 2: _t->on_tableWidget_cellClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 3: _t->on_stuTableWidget_customContextMenuRequested((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
-        case 4: _t->sortByColumn((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->on_tableWidget_cellDoubleClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 6: _t->slotSelect(); break;
-        case 7: _t->slotUnSelect(); break;
-        case 8: _t->slotSelectAll(); break;
-        case 9: _t->slotUnSelectAll(); break;
+        case 1: _t->clear(); break;
+        case 2: _t->slotUpdateTable((*reinterpret_cast< plist<pliststring>(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 3: _t->on_tableWidget_cellClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->on_stuTableWidget_customContextMenuRequested((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 5: _t->sortByColumn((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->on_tableWidget_cellDoubleClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 7: _t->slotSelect(); break;
+        case 8: _t->slotUnSelect(); break;
+        case 9: _t->slotSelectAll(); break;
+        case 10: _t->slotUnSelectAll(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -159,13 +163,13 @@ int xTableWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

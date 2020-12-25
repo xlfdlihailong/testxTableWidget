@@ -27,12 +27,6 @@ public:
         if (QTreeWidgetExx->objectName().isEmpty())
             QTreeWidgetExx->setObjectName(QStringLiteral("QTreeWidgetExx"));
         QTreeWidgetExx->resize(400, 300);
-        QFont font;
-        font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
-        font.setPointSize(14);
-        font.setBold(true);
-        font.setWeight(75);
-        QTreeWidgetExx->setFont(font);
 
         retranslateUi(QTreeWidgetExx);
 
