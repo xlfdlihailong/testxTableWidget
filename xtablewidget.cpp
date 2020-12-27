@@ -14,8 +14,8 @@ void xTableWidget::slotUpdateTable(plist<pliststring> lmdata, int keyid)
             pliststring mapi=lmdata[i];
             for(int j=0;j<mapi.size();j++)
             {
-                                this->setItemText(i,j,mapi[j].c_str());
-//                this->setItemText(i,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
+                this->setItemText(i,j,mapi[j].c_str());
+                //                this->setItemText(i,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
             }
         }
     }
@@ -40,8 +40,8 @@ void xTableWidget::slotUpdateTable(plist<pliststring> lmdata, int keyid)
                 //                hlog(indexAdd);
                 for(int j=0;j<mapi.size();j++)
                 {
-                                        this->setItemText(indexAdd,j,mapi[j].c_str());
-//                    this->setItemText(indexAdd,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
+                    this->setItemText(indexAdd,j,mapi[j].c_str());
+                    //                    this->setItemText(indexAdd,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
                 }
             }
             else//如果找到的话,就更新
@@ -50,8 +50,8 @@ void xTableWidget::slotUpdateTable(plist<pliststring> lmdata, int keyid)
                 listKeyId.append(strNameKeyColumn);
                 for(int j=0;j<mapi.size();j++)
                 {
-                                        this->setItemText(ifind,j,mapi[j].c_str());
-//                    this->setItemText(ifind,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
+                    this->setItemText(ifind,j,mapi[j].c_str());
+                    //                    this->setItemText(ifind,mapi.getKey(j).c_str(),mapi.getValue(j).c_str());
                 }
             }
         }
@@ -86,12 +86,15 @@ xTableWidget::xTableWidget(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
+    font.setFamily(QStringLiteral("DejaVu Sans Mono"));
+    font.setPointSize(12);
     //    //封装设置表头字体为楷体14号最好看
     QHeaderView* pheader=ui->tableWidget->horizontalHeader();
     //    pheader->setStyleSheet("QHeaderView::section{background-color:rgb(40,143,218);font:14pt 'DejaVu Sans Mono';color: white;};");
-    //     pheader->setStyleSheet("QHeaderView::section{font:12pt 'DejaVu Sans Mono';};");
+             pheader->setStyleSheet("QHeaderView::section{font:bold 12pt 'DejaVu Sans Mono';};");
+//    pheader->setFont(font);
     //         pheader->setStyleSheet("QHeaderView::section{font:bold 10pt 'DejaVu Sans Mono';};");
-    pheader->setStyleSheet("QHeaderView::section{font:bold 10pt '楷体';};");
+    //    pheader->setStyleSheet("QHeaderView::section{font:bold 10pt '楷体';};");
 
 
     //header的个数,列个数
@@ -130,7 +133,7 @@ xTableWidget::xTableWidget(QWidget *parent) :
     connect(ui->tableWidget->horizontalHeader(),SIGNAL(sectionClicked(int )),this, SLOT(sortByColumn(int)));
 
     //会自动排序,但是会刷,改天研究研究
-//    ui->tableWidget->setSortingEnabled(true);
+    //    ui->tableWidget->setSortingEnabled(true);
 }
 
 xTableWidget::~xTableWidget()
@@ -378,6 +381,7 @@ void xTableWidget::setItemText(int i, int j, QString str)
         //        qDebug()<<"###############";
         //不存在，新建
         pItemStr=new QTableWidgetItem(str);
+        pItemStr->setFont(font);
         //居中
         //        pItemStr->setTextAlignment(Qt::AlignCenter);//暂时不居中
         ui->tableWidget->setItem(i,j,pItemStr);
@@ -476,6 +480,7 @@ void xTableWidget::clear()
 void xTableWidget::addAction(QAction *paction)
 {
     pop_menu->addAction(paction);
+    pop_menu->setFont(font);
 }
 
 QCheckBox *xTableWidget::getCheckBox(int row)

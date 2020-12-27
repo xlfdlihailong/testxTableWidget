@@ -7,6 +7,9 @@ xTreeWidget::xTreeWidget(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+    font.setFamily(QStringLiteral("DejaVu Sans Mono"));
+    font.setPointSize(12);
     this->isCheckable=false;
     //启用拖放相关默认关闭,不然会显示拖放图标
 //    ui->treeWidget->setDragEnabled(true);
@@ -132,7 +135,7 @@ QTreeWidgetItem* xTreeWidget::newJoint(QString name)
 {
     //    //一般默认使用colum=1,多个的以后再试
     QTreeWidgetItem *pAdd=new QTreeWidgetItem(QStringList()<<name);
-
+    pAdd->setFont(0,font);
     pAdd->setIcon(0,QIcon(":/icons/摄像头.png"));//设置图标
 
     //    //就算可复选,也不包括根节点
@@ -150,6 +153,7 @@ QTreeWidgetItem* xTreeWidget::newJoint(QString name)
 QTreeWidgetItem* xTreeWidget::addRoot(QString name)
 {
     QTreeWidgetItem *pAdd=new QTreeWidgetItem(ui->treeWidget,QStringList()<<name);
+    pAdd->setFont(0,font);
     pAdd->setIcon(0,QIcon(":/icons/层级.png"));//设置图标
     return pAdd;
 }

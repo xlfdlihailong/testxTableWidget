@@ -35,8 +35,8 @@
       <font>
        <family>楷体</family>
        <pointsize>11</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
     </widget>

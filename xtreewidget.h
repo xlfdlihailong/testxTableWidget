@@ -19,6 +19,7 @@ class xTreeWidget : public QWidget
     Q_OBJECT
 
 public:
+        QFont font;
     explicit xTreeWidget(QWidget *parent = nullptr);
     ~xTreeWidget();
 

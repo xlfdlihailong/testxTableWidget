@@ -40,8 +40,8 @@ public:
         QFont font;
         font.setFamily(QString::fromUtf8("\346\245\267\344\275\223"));
         font.setPointSize(11);
-        font.setBold(true);
-        font.setWeight(75);
+        font.setBold(false);
+        font.setWeight(50);
         treeWidget->setFont(font);
 
         verticalLayout->addWidget(treeWidget);

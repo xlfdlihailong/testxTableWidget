@@ -18,6 +18,7 @@ class xTableWidget : public QWidget
     Q_OBJECT
 
 public:
+    QFont font;
     explicit xTableWidget(QWidget *parent = 0);
     ~xTableWidget();
 
