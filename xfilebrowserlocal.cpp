@@ -10,17 +10,17 @@ xFileBrowserLocal::xFileBrowserLocal(QWidget *parent) :
     ui->plineEditpwd->setText(strpwd.c_str());
     ui->ptab->setHeaderText(QStringList()<<strname.c_str()<<strsize.c_str()<<strtype.c_str());
     connect(ui->ptab,SIGNAL(sigDoubleClick(int,int)),this,SLOT(slotDoubleClickLocal(int,int)));
-    connect(this,SIGNAL(sigUpdateTable(plist<pmap<pstring,pstring> >,int)),
-            ui->ptab,SLOT(slotUpdateTable(plist<pmap<pstring,pstring> >,int)));
+    connect(this,SIGNAL(sigUpdateTable(plist<pliststring>,int)),
+            ui->ptab,SLOT(slotUpdateTable(plist<pliststring>,int)));
     ui->ptab->setColWidth(strname.c_str(),300);
 
     //类似windows文件管理器,把左边tree控件设置为显示我的电脑以及各个盘并展开到下一级
     ui->ptree->addRoot("我的电脑");
-    plist<pmap<pstring,pstring>> lmall=(this->getDirInfo("我的电脑"));
+    plist<pliststring> lmall=(this->getDirInfo("我的电脑"));
 
     for(int i=0;i<lmall.size();i++)
     {
-        pstring name=lmall[i][strname];
+        pstring name=lmall[i][0];
         hlog(name);
         auto joint=ui->ptree->newJoint(name.c_str());
         ui->ptree->root()->addChild(joint);
@@ -30,10 +30,10 @@ xFileBrowserLocal::xFileBrowserLocal(QWidget *parent) :
         //    this->strpwd=strClick;
         //        this->showDirInfo(this->strpwd);
         //加入到tree并展开
-        for(pmap<pstring,pstring> mapi:infoDir)
+        for(pliststring mapi:infoDir)
         {
-            hlog(mapi[strname]);
-            QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[strname].c_str());
+            hlog(mapi[0]);
+            QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[0].c_str());
             joint->addChild(pchild);
         }
         //        ui->ptree->expandAll();
@@ -52,9 +52,9 @@ xFileBrowserLocal::~xFileBrowserLocal()
     delete ui;
 }
 
-plist<pmap<pstring, pstring> > xFileBrowserLocal::getDirInfo(pstring strDirDes)
+plist<pliststring> xFileBrowserLocal::getDirInfo(pstring strDirDes)
 {
-    plist<pmap<pstring,pstring> > lmall;
+    plist<pliststring> lmall;
     plist<pstring> listallFile;
     //    QString mFolderPath="C:/Users/Administrator/Desktop";
     QString mFolderPath=qlib::toString(strDirDes);
@@ -120,11 +120,11 @@ plist<pmap<pstring, pstring> > xFileBrowserLocal::getDirInfo(pstring strDirDes)
         //        hlog(listallFile);
         for(int i=0;i<listallDir.size();i++)
         {
-            pmap<pstring,pstring> mapinfo;
-            mapinfo.add(strname,listallDir[i]);
-            mapinfo.add(strtype,"目录");
+            pliststring mapinfo;
+            mapinfo.append(listallDir[i]);
+            mapinfo.append("目录");
             //要有这一句,不然会崩,因为现在pmap都比较严格
-            mapinfo.add(strsize,"");
+            mapinfo.append("");
             //        hlog(mapinfo);
             lmall.append(mapinfo);
         }
@@ -136,11 +136,11 @@ plist<pmap<pstring, pstring> > xFileBrowserLocal::getDirInfo(pstring strDirDes)
             pstring strFullPath=strDirDes+"/"+pname;
             //            hlog(strFullPath);
             longlong llsize=plib::getFileSize(strFullPath);
-            pmap<pstring,pstring> mapinfo;
-            mapinfo.add(strname,listallFile[i]);
-            mapinfo.add(strtype,"文件");
+            pliststring mapinfo;
+            mapinfo.append(listallFile[i]);
+            mapinfo.append("文件");
             //整数M
-            mapinfo.add(strsize,plib::toString((int)1.0*llsize/1024/1024)+" MB");
+            mapinfo.append(plib::toString((int)1.0*llsize/1024/1024)+" MB");
             //        hlog(mapinfo);
             lmall.append(mapinfo);
         }
@@ -151,11 +151,11 @@ plist<pmap<pstring, pstring> > xFileBrowserLocal::getDirInfo(pstring strDirDes)
         for(int i=0;i<listdevice.size();i++)
         {
             QString devicei=listdevice[i];
-            pmap<pstring,pstring> mapinfo;
-            mapinfo.add(strname,devicei.toStdString());
-            mapinfo.add(strtype,"目录");
+            pliststring mapinfo;
+            mapinfo.append(devicei.toStdString());
+            mapinfo.append("目录");
             //要有这一句,不然会崩,因为现在pmap都比较严格
-            mapinfo.add(strsize,"");
+            mapinfo.append("");
             //        hlog(mapinfo);
             lmall.append(mapinfo);
         }
@@ -164,9 +164,10 @@ plist<pmap<pstring, pstring> > xFileBrowserLocal::getDirInfo(pstring strDirDes)
     return lmall;
 }
 
-plist<pmap<pstring,pstring> >  xFileBrowserLocal::showDirInfo(pstring strdir)
+plist<pliststring>  xFileBrowserLocal::showDirInfo(pstring strdir)
 {
-    plist<pmap<pstring,pstring> > lmall=this->getDirInfo(strdir);
+    plist<pliststring> lmall=this->getDirInfo(strdir);
+    hlog(lmall);
     //显示当前路径下的所有文件以及文件夹
     sigUpdateTable(lmall);
     return lmall;
@@ -314,10 +315,13 @@ void xFileBrowserLocal::slotTreeDoubleClick(QTreeWidgetItem *item, int column)
     //    this->strpwd=strClick;
     //        this->showDirInfo(this->strpwd);
     //加入到tree并展开
-    for(pmap<pstring,pstring> mapi:infoDir)
+    for(pliststring mapi:infoDir)
     {
         //        hlog(mapi[strname]);
-        QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[strname].c_str());
+        //先清空
+
+        QTreeWidgetItem* pchild=ui->ptree->newJoint(mapi[0].c_str());
+        item->remove(pchiled);
         item->addChild(pchild);
     }
 }

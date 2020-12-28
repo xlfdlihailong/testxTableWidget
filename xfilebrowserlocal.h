@@ -22,10 +22,10 @@ public:
     pstring strtype="类型";
     pstring strname="名称";
     pstring strsize="大小";
-    plist<pmap<pstring,pstring>> getDirInfo(pstring strDirDes);
-    plist<pmap<pstring, pstring> > showDirInfo(pstring strdir);
+    plist<pliststring> getDirInfo(pstring strDirDes);
+    plist<pliststring> showDirInfo(pstring strdir);
 signals:
-    void sigUpdateTable(plist<pmap<pstring,pstring>> lmdata, int keyid=0);
+    void sigUpdateTable(plist<pliststring> lmdata, int keyid=0);
 private slots:
     void slotDoubleClickLocal(int row,int col);
     void slotThreadSendData();

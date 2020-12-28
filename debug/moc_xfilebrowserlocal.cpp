@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_xFileBrowserLocal_t {
     QByteArrayData data[15];
-    char stringdata0[188];
+    char stringdata0[177];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,23 +32,23 @@ static const qt_meta_stringdata_xFileBrowserLocal_t qt_meta_stringdata_xFileBrow
 QT_MOC_LITERAL(0, 0, 17), // "xFileBrowserLocal"
 QT_MOC_LITERAL(1, 18, 14), // "sigUpdateTable"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 29), // "plist<pmap<pstring,pstring> >"
-QT_MOC_LITERAL(4, 64, 6), // "lmdata"
-QT_MOC_LITERAL(5, 71, 5), // "keyid"
-QT_MOC_LITERAL(6, 77, 20), // "slotDoubleClickLocal"
-QT_MOC_LITERAL(7, 98, 3), // "row"
-QT_MOC_LITERAL(8, 102, 3), // "col"
-QT_MOC_LITERAL(9, 106, 18), // "slotThreadSendData"
-QT_MOC_LITERAL(10, 125, 19), // "slotTreeDoubleClick"
-QT_MOC_LITERAL(11, 145, 16), // "QTreeWidgetItem*"
-QT_MOC_LITERAL(12, 162, 4), // "item"
-QT_MOC_LITERAL(13, 167, 6), // "column"
-QT_MOC_LITERAL(14, 174, 13) // "slotTreeClick"
+QT_MOC_LITERAL(3, 34, 18), // "plist<pliststring>"
+QT_MOC_LITERAL(4, 53, 6), // "lmdata"
+QT_MOC_LITERAL(5, 60, 5), // "keyid"
+QT_MOC_LITERAL(6, 66, 20), // "slotDoubleClickLocal"
+QT_MOC_LITERAL(7, 87, 3), // "row"
+QT_MOC_LITERAL(8, 91, 3), // "col"
+QT_MOC_LITERAL(9, 95, 18), // "slotThreadSendData"
+QT_MOC_LITERAL(10, 114, 19), // "slotTreeDoubleClick"
+QT_MOC_LITERAL(11, 134, 16), // "QTreeWidgetItem*"
+QT_MOC_LITERAL(12, 151, 4), // "item"
+QT_MOC_LITERAL(13, 156, 6), // "column"
+QT_MOC_LITERAL(14, 163, 13) // "slotTreeClick"
 
     },
     "xFileBrowserLocal\0sigUpdateTable\0\0"
-    "plist<pmap<pstring,pstring> >\0lmdata\0"
-    "keyid\0slotDoubleClickLocal\0row\0col\0"
+    "plist<pliststring>\0lmdata\0keyid\0"
+    "slotDoubleClickLocal\0row\0col\0"
     "slotThreadSendData\0slotTreeDoubleClick\0"
     "QTreeWidgetItem*\0item\0column\0slotTreeClick"
 };
@@ -96,8 +96,8 @@ void xFileBrowserLocal::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         xFileBrowserLocal *_t = static_cast<xFileBrowserLocal *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->sigUpdateTable((*reinterpret_cast< plist<pmap<pstring,pstring> >(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->sigUpdateTable((*reinterpret_cast< plist<pmap<pstring,pstring> >(*)>(_a[1]))); break;
+        case 0: _t->sigUpdateTable((*reinterpret_cast< plist<pliststring>(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 1: _t->sigUpdateTable((*reinterpret_cast< plist<pliststring>(*)>(_a[1]))); break;
         case 2: _t->slotDoubleClickLocal((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 3: _t->slotThreadSendData(); break;
         case 4: _t->slotTreeDoubleClick((*reinterpret_cast< QTreeWidgetItem*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
@@ -108,7 +108,7 @@ void xFileBrowserLocal::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (xFileBrowserLocal::*_t)(plist<pmap<pstring,pstring>> , int );
+            typedef void (xFileBrowserLocal::*_t)(plist<pliststring> , int );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&xFileBrowserLocal::sigUpdateTable)) {
                 *result = 0;
             }
@@ -153,7 +153,7 @@ int xFileBrowserLocal::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void xFileBrowserLocal::sigUpdateTable(plist<pmap<pstring,pstring>> _t1, int _t2)
+void xFileBrowserLocal::sigUpdateTable(plist<pliststring> _t1, int _t2)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
